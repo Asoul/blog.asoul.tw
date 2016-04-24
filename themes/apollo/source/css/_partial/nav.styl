@@ -78,6 +78,26 @@ body.nav-opened .mobile-nav
   -ms-transform: translate3D(0, 0, 0)
   transform: translate3D(0, 0, 0)
 
+.nav-title
+  position: absolute
+  top: 45px
+  left: 30px
+  font-size: 16px
+  font-weight: 100
+  text-transform: uppercase
+  color: #fff
+
+.mobile-nav
+  ul
+    padding: 90px 9% 5%
+    list-style: none
+
+  li
+    padding: 0.5em 2em
+    display: block
+    a
+      color: #fff
+
 .nav-close
   position: absolute
   top: 38px
@@ -134,8 +154,30 @@ body.nav-opened .mobile-nav
   transition: transform 0.5s ease,
               opacity 0.3s ease 0.7s
 
+.subscribe-button
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  display: block
+  position: absolute
+  bottom: 30px
+  left: 30px
+  right: 30px
+  height: 3em
+  padding: 0 20px
+  color: #111
+  text-align: center
+  font-size: 0.9em
+  font-family: "Open Sans", sans-serif
+  text-transform: uppercase
+  text-decoration: none
+  line-height: 3em
+  letter-spacing: 0.1em
+  border-radius: 3px
+  background: #fff
+  transition: all ease 0.3s
 
-#nav-rss-link
+.nav-rss-link
   &:before
     content: "\f09e"
 
@@ -144,7 +186,7 @@ body.nav-opened .mobile-nav
   .mobile-nav-panel
     display: block
     text-align: right
-    transition: opacity 0.3s ease
+    transition: opacity 0.5s ease
 
   body.nav-opened .mobile-nav-panel
     opacity: 0

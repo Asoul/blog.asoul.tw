@@ -1,11 +1,17 @@
 <nav class="mobile-nav">
 		<h3 class="nav-title">Menu</h3>
 		<a href="#" class="nav-close">
-				<span class="hidden">Close</span>
+				<span class="hidden"></span>
 		</a>
 		<ul>
 				<% for (var i in theme.menu){ %><li><a href="<%- theme.menu[i] %>"><%= i %></a></li><% } %>
-				<% if (theme.rss){ %><li><a href="<%- theme.rss %>" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li><% } %>
 		</ul>
+		<% if (theme.rss){ %>
+			<a class="subscribe-button" href="<%- theme.rss %>">
+				<i class="nav-icon nav-rss-link"></i>
+				<span>Subscribe</span>
+			</a>
+		<% } %>
+
 </nav>
 <span class="nav-cover"></span>

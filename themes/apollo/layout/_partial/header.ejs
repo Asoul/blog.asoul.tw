@@ -8,7 +8,7 @@
 	<nav class="desktop-nav">
 		<ul>
 			<% for (var i in theme.menu){ %><li><a href="<%- theme.menu[i] %>"><%= i %></a></li><% } %>
-			<% if (theme.rss){ %><li><a href="<%- theme.rss %>" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li><% } %>
+			<% if (theme.rss){ %><li><a href="<%- theme.rss %>" class="nav-icon nav-rss-link" title="RSS Feed"></a></li><% } %>
 		</ul>
 	</nav>
 </header>
