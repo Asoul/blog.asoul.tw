@@ -27,17 +27,17 @@ i18n_dir: :lang
 skip_render:
 
 # Apollo setting
-# Header
+## Header
 menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
 
-# Content
+## Content
 excerpt_link: Read More
 fancybox: true
 
-# Miscellaneous
+## Miscellaneous
 google_analytics: UA-60364521-4
 favicon: /favicon.png
 
@@ -76,6 +76,10 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
+
+### Disqus setting
+disqus_shortname: asoul
+
 ## Themes: http://hexo.io/themes/
 theme: apollo
 
