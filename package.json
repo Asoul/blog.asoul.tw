@@ -2,6 +2,9 @@
   "name": "blog",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "publish": "hexo clean && hexo generate && hexo deploy"
+  },
   "hexo": {
     "version": "3.2.0"
   },
