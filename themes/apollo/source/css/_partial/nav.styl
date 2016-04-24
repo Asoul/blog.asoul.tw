@@ -1,7 +1,7 @@
 /* Desktop navigation */
 
 .desktop-nav
-  margin: 10px 0
+  margin: 17px 0
   font-size: 85%
   text-transform: uppercase
   float: right
@@ -33,7 +33,7 @@
 .nav-icon
   font-family: font-icon
   text-align: center
-  font-size: font-size
+  font-size: 1.8em
   width: font-size
   height: font-size
   padding: 20px 8px
@@ -177,9 +177,25 @@ body.nav-opened .mobile-nav
   background: #fff
   transition: all ease 0.3s
 
-.nav-rss-link
+.icon-rss
   &:before
     content: "\f09e"
+
+.icon-archive
+  &:before
+    content: "\f01c"
+
+.icon-home
+  &:before
+    content: "\f015"
+
+.icon-github
+  &:before
+    content: "\f09b"
+
+.icon-facebook
+  &:before
+    content: "\f09a"
 
 // Mobile
 @media (max-width:767px)
