@@ -19,8 +19,9 @@
   }
 
   // Mobile nav
-  $(".mobile-nav-panel").click(function() {
-    $(".nav").toggleClass("active")
+  $(".mobile-nav-panel, .nav-cover, .nav-close").on("click", function(e){
+      e.preventDefault();
+      $("body").toggleClass("nav-opened nav-closed");
   });
 
 })(jQuery);

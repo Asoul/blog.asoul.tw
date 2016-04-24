@@ -1,0 +1,160 @@
+/* Desktop navigation */
+
+.desktop-nav
+  margin: 10px 0
+  font-size: 85%
+  text-transform: uppercase
+  float: right
+  position: relative
+  ul
+    display: block
+    *zoom: 1
+    margin: 0
+    padding: 0
+    &:after
+      display: block
+      visibility: hidden
+      font-size: 0
+      height: 0;
+      clear: both
+      content: "."
+  li
+    float: left
+    margin: .3em 0 .3em 2em
+    img
+      vertical-align: middle
+
+  a
+    font-weight: bold
+    color: color-default
+    &:hover
+      color: color-link
+
+.nav-icon
+  font-family: font-icon
+  text-align: center
+  font-size: font-size
+  width: font-size
+  height: font-size
+  padding: 20px 8px
+  position: relative
+  cursor: pointer
+
+
+.mobile-nav-panel
+  display: none
+  padding: 15px 0 0
+
+  .icon-reorder
+    cursor: pointer
+    display: inline-block
+    width: 18px
+    height: 17px
+    background: url('/images/icon-reorder@2x.png') no-repeat 0 0
+    background-size: 18px 17px
+
+/* Mobile Navigation */
+
+body.nav-opened .nav-cover
+  position: fixed
+  top: 0
+  left: 0
+  right: 240px
+  bottom: 0
+  z-index: 200
+
+body.nav-closed .mobile-nav
+  -webkit-transform: translate3D(97px, 0, 0)
+  -ms-transform: translate3D(97px, 0, 0)
+  transform: translate3D(97px, 0, 0)
+
+body.nav-opened .mobile-nav
+  opacity: 1
+  -webkit-transition: -webkit-transform 0.3s ease,
+                      opacity 0s ease 0s
+  transition: transform 0.3s ease,
+              opacity 0s ease 0s
+  -webkit-transform: translate3D(0, 0, 0)
+  -ms-transform: translate3D(0, 0, 0)
+  transform: translate3D(0, 0, 0)
+
+.nav-close
+  position: absolute
+  top: 38px
+  right: 25px
+  width: 20px
+  height: 20px
+  padding: 0
+  font-size: 10px
+
+.nav-close:focus
+  outline: 0
+
+.nav-close:before,
+.nav-close:after
+  content: ''
+  position: absolute
+  top: 0
+  width: 20px
+  height: 1px
+  background: rgb(150,150,150)
+  top: 15px
+  -webkit-transition: background 0.15s ease
+  transition: background 0.15s ease
+
+.nav-close:before
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.nav-close:after
+  -webkit-transform: rotate(-45deg)
+  -ms-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+
+.nav-close:hover:before,
+.nav-close:hover:after
+  background: rgb(255,255,255)
+
+.mobile-nav
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 5
+  width: 240px
+  opacity: 0
+  background: #111
+  margin-bottom: 0
+  text-align: left
+  overflow-y: auto
+  -webkit-transition: -webkit-transform 0.5s ease,
+                      opacity 0.3s ease 0.7s
+  transition: transform 0.5s ease,
+              opacity 0.3s ease 0.7s
+
+
+#nav-rss-link
+  &:before
+    content: "\f09e"
+
+// Mobile
+@media (max-width:767px)
+  .mobile-nav-panel
+    display: block
+    text-align: right
+    transition: opacity 0.3s ease
+
+  body.nav-opened .mobile-nav-panel
+    opacity: 0
+
+  body.nav-closed .mobile-nav-panel
+    opacity: 1
+
+  .desktop-nav
+    display: none
+
+  .mobile-nav
+    position: fixed
+    display: block

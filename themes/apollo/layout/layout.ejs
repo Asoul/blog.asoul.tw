@@ -1,12 +1,15 @@
 <%- partial('_partial/head') %>
-<body>
-  <div id="container">
-    <%- partial('_partial/header') %>
-    <div id="main">
-      <%- body %>
+<body class="nav-closed">
+  <%- partial('_partial/navigation') %>
+  <div class="site-wrapper">
+    <div id="container">
+      <%- partial('_partial/header') %>
+      <div id="main">
+        <%- body %>
+      </div>
+      <%- partial('_partial/footer') %>
+      <%- partial('_partial/after-footer') %>
     </div>
-    <%- partial('_partial/footer') %>
-    <%- partial('_partial/after-footer') %>
   </div>
 </body>
 </html>
