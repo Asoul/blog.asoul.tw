@@ -21,7 +21,7 @@
   // Mobile nav
   $(".mobile-nav-panel, .nav-cover, .nav-close").on("click", function(e){
       e.preventDefault();
-      $("body").toggleClass("nav-opened nav-closed");
+      $("html").toggleClass("nav-opened nav-closed");
   });
 
 })(jQuery);

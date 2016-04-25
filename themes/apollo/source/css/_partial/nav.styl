@@ -55,10 +55,16 @@
 
 /* Mobile Navigation */
 
-body.nav-opened
+html.nav-opened
   overflow: hidden
+  position: relative
+  height: 100%
+  body
+    overflow: hidden
+    position: relative
+    height: 100%
 
-body.nav-opened .nav-cover
+html.nav-opened .nav-cover
   position: fixed
   top: 0
   left: 0
@@ -66,12 +72,12 @@ body.nav-opened .nav-cover
   bottom: 0
   z-index: 200
 
-body.nav-closed .mobile-nav
+html.nav-closed .mobile-nav
   -webkit-transform: translate3D(97px, 0, 0)
   -ms-transform: translate3D(97px, 0, 0)
   transform: translate3D(97px, 0, 0)
 
-body.nav-opened .mobile-nav
+html.nav-opened .mobile-nav
   opacity: 1
   -webkit-transition: -webkit-transform 0.3s ease,
                       opacity 0s ease 0s
@@ -207,10 +213,10 @@ body.nav-opened .mobile-nav
     text-align: right
     transition: opacity 0.5s ease
 
-  body.nav-opened .mobile-nav-panel
+  html.nav-opened .mobile-nav-panel
     opacity: 0
 
-  body.nav-closed .mobile-nav-panel
+  html.nav-closed .mobile-nav-panel
     opacity: 1
 
   .desktop-nav
