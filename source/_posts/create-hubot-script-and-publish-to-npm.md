@@ -77,7 +77,7 @@ npm test
 
 基礎語法可以參考 [Hubot Document](https://hubot.github.com/docs/) ，製作腳本的方法可以參考 [Hubot Scripting](https://github.com/github/hubot/blob/master/docs/scripting.md#creating-a-script-package) 。
 
-# <a name="pulish-to-npm"></a> 三、把做好的 hubot script 推上 npm
+# <a name="pulish-to-npm"></a> 三、把做好的 Hubot Script 推上 npm
 
 推上 npm 也不會太複雜，在[第二步](#build-hubot-script)時我們先建出來的專案已經有產生 `package.json` 了，現在就把裡面的資訊補完善即可，版本可以改成 `1.0.0` 或是開發中用 `0.0.0` 也可以，版本號的邏輯可以參考 [Semantic Version](http://semver.org/lang/zh-TW/)。
 

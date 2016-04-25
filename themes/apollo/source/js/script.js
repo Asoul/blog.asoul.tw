@@ -1,27 +1,27 @@
-(function($){
+(function($) {
   // Caption
-  $('.entry-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
+  $('.entry-content').each(function(i) {
+    $(this).find('img').each(function() {
+      if ($(this).parent().hasClass('fancybox')) return
 
-      var alt = this.alt;
+      var alt = this.alt
 
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>')
+    })
 
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
+    $(this).find('.fancybox').each(function() {
+      $(this).attr('rel', 'article' + i)
+    })
+  })
 
-  if ($.fancybox){
-    $('.fancybox').fancybox();
+  if ($.fancybox) {
+    $('.fancybox').fancybox()
   }
 
   // Mobile nav
-  $(".mobile-nav-panel, .nav-cover, .nav-close").on("click", function(e){
-      e.preventDefault();
-      $("html").toggleClass("nav-opened nav-closed");
-  });
+  $(".mobile-nav-panel, .nav-cover, .nav-close").on("click", function(e) {
+      e.preventDefault()
+      $("html").toggleClass("nav-opened nav-closed")
+  })
 
-})(jQuery);
+})(jQuery)
