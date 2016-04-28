@@ -22,9 +22,9 @@ tags:
 
 # <a name="create-basic-server"></a> 第一步：建立基本 Server
 
-在看這篇文章之前，必須要先有個[域名](https://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D) (Domain Name)，可以在 [Godaddy](https://tw.godaddy.com/) 購買[三十元台幣一年](http://www.retailmenot.com/view/godaddy.com)的便宜域名，在架 HTTPS Server 前，先把一般 HTTP Server 架起來。
+在看這篇文章之前，必須要先有個[域名](https://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D) (Domain Name)，可以在 [Godaddy](https://tw.godaddy.com/) 購買[三十元台幣一年](http://www.retailmenot.com/view/godaddy.com)的便宜域名。也要有一台主機，這邊是用 Digital Ocean 的機器，如果你是學生，那 [Github 有送你 1500 元免費額度](https://education.github.com/pack)。
 
-基本 nginx 設定如下，以下範例以 example.com 作為域名，複製貼上時**記得更改成自己的**。
+在架 HTTPS Server 前，先把一般 HTTP Server 架起來。基本 nginx 設定如下，以下範例以 example.com 作為域名，複製貼上時**記得更改成自己的**。
 
 ```nginx
 server {
