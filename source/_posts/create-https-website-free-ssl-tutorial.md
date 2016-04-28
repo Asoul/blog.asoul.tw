@@ -22,9 +22,9 @@ tags:
 
 # <a name="create-basic-server"></a> 第一步：建立基本 Server
 
-在看這篇文章之前，你必須要先有個[域名](https://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D) (Domain Name)，可以在 [Godaddy](https://tw.godaddy.com/) 購買[三十元台幣一年](http://www.retailmenot.com/view/godaddy.com)的便宜域名，在架 HTTPS Server 前，我們先把一般 HTTP Server 架起來。
+在看這篇文章之前，必須要先有個[域名](https://zh.wikipedia.org/zh-tw/%E5%9F%9F%E5%90%8D) (Domain Name)，可以在 [Godaddy](https://tw.godaddy.com/) 購買[三十元台幣一年](http://www.retailmenot.com/view/godaddy.com)的便宜域名，在架 HTTPS Server 前，先把一般 HTTP Server 架起來。
 
-基本 nginx 設定如下，以下範例以 example.com 作為域名，複製貼上時記得更改成自己的
+基本 nginx 設定如下，以下範例以 example.com 作為域名，複製貼上時**記得更改成自己的**。
 
 ```nginx
 server {
@@ -36,7 +36,7 @@ server {
 }
 ```
 
-上面程式會把 `example.com` 進來的請求導向至你在 `http://127.0.0.1:good-port` 架設的伺服器。如果不能了解以上程式碼，可以參考 [Nginx 教學](https://www.google.com.tw/#safe=off&q=nginx+%E6%95%99%E5%AD%B8)。
+上面程式會把 `example.com` 進來的請求導向至 `http://127.0.0.1:good-port` 架設的伺服器。如果不能了解以上程式碼，可以參考 [Nginx 教學](https://www.google.com.tw/#safe=off&q=nginx+%E6%95%99%E5%AD%B8)。
 
 # <a name="install-letsencrypt"></a> 第二步：安裝 Let's Encrypt
 
@@ -60,7 +60,7 @@ sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 
 # <a name="install-certificate"></a> 第三步：安裝憑證
 
-這邊會用到 Webroot plugin 來安裝憑證，而 Webroot plugin 會去找伺服器的 `/.well-known` 這個目錄，所以我們要在 nginx config 加入
+這邊會用到 Webroot plugin 來安裝憑證，而 Webroot plugin 會去找伺服器的 `/.well-known` 這個目錄，所以要在 nginx config 加入
 
 ```nginx
 location ~ /.well-known {
@@ -68,7 +68,7 @@ location ~ /.well-known {
 }
 ```
 
-現在你的 `/etc/nginx/site-available/default` 應該變成這樣
+現在 `/etc/nginx/site-available/default` 應該變成
 
 ```nginx
 server {
@@ -100,7 +100,7 @@ sudo ./letsencrypt-auto certonly -a webroot --webroot-path=/your/website/root -d
 
 如果是安裝遇到 `cryptography` 錯誤，可以參考 [cryptography 錯誤排解](https://github.com/letsencrypt/letsencrypt/issues/2324)。
 
-如果步驟中有要輸入信箱的地方，可以輸入常用信箱，Let's Encrypt 會在憑證快要到期前寄信通知。目前憑證期限是三個月，不過 Let's Encrypt 也可以利用 `crontab` 自動續約，[文末會講到](#set-auto-update)。
+如果步驟中有要輸入信箱的地方，可以輸入常用信箱，Let's Encrypt 會在憑證快要到期前寄信通知。目前**憑證期限是三個月**，不過 Let's Encrypt 也可以利用 `crontab` 自動續約，[文末會講到](#set-auto-update)。
 
 如果成功了，就可以看到：
 
@@ -148,7 +148,7 @@ ssl_stapling_verify on;
 add_header Strict-Transport-Security max-age=15768000;
 ```
 
-如此，現在 `/etc/nginx/site-available/default` 應該會長得像這樣
+現在 `/etc/nginx/site-available/default` 應該會長得像這樣
 
 ```nginx
 server {
@@ -177,7 +177,7 @@ server {
 }
 ```
 
-這樣 https 伺服器的設定就完成了，不過為了讓原本連上 HTTP 的使用者可以自動轉向 HTTPS，可以加上
+這樣 HTTPS 伺服器的設定就完成了，不過為了讓原本連上 HTTP 的使用者可以自動轉向 HTTPS，可以加上
 
 ```
 server {
@@ -203,23 +203,25 @@ sudo service nginx reload
 
 # <a name="set-auto-update"></a> 第五步：設定自動更新憑證
 
-Let's Encrypt 可以自動更新憑證
+Let's Encrypt 可以更新憑證，renew 會檢查當前憑證，如果快要過期就會自動續約
 
 ```
 /opt/letsencrypt/letsencrypt-auto renew
 ```
 
-所以只要把把自動更新設定在 crontab 裡，再重新載入 nginx 就好了。
+所以只要把自動更新設定在 crontab 裡就好了
 
-編輯 crontab
+Let's Encrypt 是三個月過期，可以設定每週一早上 2:30 檢查憑證，2:35 重啟 nginx server，這樣就不怕憑證過期了
 
 ```
 crontab -e
 ```
 
-Let's Encrypt 是三個月過期，可以設定每週一早上 2:30 更新憑證，2:35 重啟 nginx server，這樣就不怕憑證過期了
+編輯 crontab，設定排程
 
 ```
 30 2 * * 1 /opt/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
 35 2 * * 1 /etc/init.d/nginx reload
 ```
+
+若是遇到問題還是有其他指教，都歡迎留言。
