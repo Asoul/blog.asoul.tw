@@ -42,19 +42,19 @@ server {
 
 更新套件清單
 
-```
+```bash
 sudo apt-get update
 ```
 
 安裝相關套件
 
-```
+```bash
 sudo apt-get -y install git bc
 ```
 
 下載 letsencrypt 套件至 `/opt/letsencrypt`
 
-```
+```bash
 sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt
 ```
 
@@ -85,13 +85,13 @@ server {
 
 更改設定完讓 nginx 重新載入
 
-```
+```bash
 sudo service nginx reload
 ```
 
 現在就可以用 Let's Encrypt 的 webroot 插件來安裝憑證了
 
-```
+```bash
 cd /opt/letsencrypt
 sudo ./letsencrypt-auto certonly -a webroot --webroot-path=/your/website/root -d example.com -d www.example.com
 ```
@@ -118,7 +118,7 @@ IMPORTANT NOTES:
 
 如此憑證就申請好了，接下來為了安全性考量，可以來產生一把 [Diffie-Hellman 密鑰](https://zh.wikipedia.org/wiki/%E8%BF%AA%E8%8F%B2-%E8%B5%AB%E7%88%BE%E6%9B%BC%E5%AF%86%E9%91%B0%E4%BA%A4%E6%8F%9B)，產生密鑰可能會花上一段時間。
 
-```
+```bash
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
@@ -126,7 +126,7 @@ sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 
 現在要把原本的 HTTP 改成 HTTPS，所以把原本的 80 port 設定改成 443，並加上 SSL 憑證的設定
 
-```
+```nginx
 listen 443 ssl;
 server_name example.com www.example.com;
 
@@ -136,7 +136,7 @@ ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
 
 為了讓 SSL 更安全，加上剛剛產生的 Diffie-Hellman 密鑰
 
-```
+```nginx
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 ssl_prefer_server_ciphers on;
 ssl_dhparam /etc/ssl/certs/dhparam.pem;
@@ -179,7 +179,7 @@ server {
 
 這樣 HTTPS 伺服器的設定就完成了，不過為了讓原本連上 HTTP 的使用者可以自動轉向 HTTPS，可以加上
 
-```
+```nginx
 server {
     listen 80;
     server_name example.com www.example.com;
@@ -189,7 +189,7 @@ server {
 
 更改設定完讓 Nginx 重新載入
 
-```
+```bash
 sudo service nginx reload
 ```
 
@@ -205,7 +205,7 @@ sudo service nginx reload
 
 Let's Encrypt 可以更新憑證，renew 會檢查當前憑證，如果快要過期就會自動續約
 
-```
+```bash
 /opt/letsencrypt/letsencrypt-auto renew
 ```
 
@@ -213,13 +213,13 @@ Let's Encrypt 可以更新憑證，renew 會檢查當前憑證，如果快要過
 
 Let's Encrypt 是三個月過期，可以設定每週一早上 2:30 檢查憑證，2:35 重啟 nginx server，這樣就不怕憑證過期了
 
-```
+```bash
 crontab -e
 ```
 
 編輯 crontab，設定排程
 
-```
+```bash
 30 2 * * 1 /opt/letsencrypt/letsencrypt-auto renew >> /var/log/le-renew.log
 35 2 * * 1 /etc/init.d/nginx reload
 ```
