@@ -8,15 +8,15 @@ tags:
 
 這篇文章會以 [nginx](http://nginx.org/) 架在 [Digital Ocean](https://www.digitalocean.com/) 上的 Ubuntu 14.04.4 LTS 為範例，講解如何使用 [Let's Encrypt](https://letsencrypt.org/) 套件裝上免費的 [SSL](https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E5%8D%94%E8%AD%B0) 憑證，參考自 [Digital Ocean 的教學](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04)。
 
-<img src="/images/create-https-website-free-ssl-tutorial/letsencrypt-logo.png" width="600">
+<img src="/images/create-https-website-free-ssl-tutorial/letsencrypt-logo.png" width="400">
 
 這篇文章包括：
 
-- [第一步：建立基本 Server](#create-basic-server)
-- [第二步：安裝 Let's Encrypt](#install-letsencrypt)
-- [第三步：安裝憑證](#install-certificate)
-- [第四步：更新 Nginx Server 設定](#update-server)
-- [第五步：設定自動更新憑證](#set-auto-update)
+- [第一步：建立基本 Server](/2016/04/28/create-https-website-free-ssl-tutorial/#create-basic-server)
+- [第二步：安裝 Let's Encrypt](/2016/04/28/create-https-website-free-ssl-tutorial/#install-letsencrypt)
+- [第三步：安裝憑證](/2016/04/28/create-https-website-free-ssl-tutorial/#install-certificate)
+- [第四步：更新 Nginx Server 設定](/2016/04/28/create-https-website-free-ssl-tutorial/#update-server)
+- [第五步：設定自動更新憑證](/2016/04/28/create-https-website-free-ssl-tutorial/#set-auto-update)
 
 <!-- more -->
 

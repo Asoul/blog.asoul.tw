@@ -12,9 +12,9 @@ tags:
 
 這篇文章會分享：
 
-- [一、簡單介紹 Hubot](#hubot-intro)
-- [二、怎麼做一個 Hubot Script](#build-hubot-script)
-- [三、把做好的 Hubot Script 推上 npm](#pulish-to-npm)
+- [一、簡單介紹 Hubot](/2016/04/24/create-hubot-script-and-publish-to-npm/#hubot-intro)
+- [二、怎麼做一個 Hubot Script](/2016/04/24/create-hubot-script-and-publish-to-npm/#build-hubot-script)
+- [三、把做好的 Hubot Script 推上 npm](/2016/04/24/create-hubot-script-and-publish-to-npm/#pulish-to-npm)
 
 <!-- more -->
 
