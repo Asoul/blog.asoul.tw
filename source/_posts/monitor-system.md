@@ -67,7 +67,6 @@ def get_status():
 ```python
 @BP.route("/", methods=['POST'])
 def update_status():
-    global last_time
     payload = request.get_json()
     new_time = payload.get('time')
 
