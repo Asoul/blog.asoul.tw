@@ -51,6 +51,6 @@ UptimeRobot 本身可以提供一些基本的監控方式，像是 HTTP(S)、POR
 
 平行監控系統的目的是要讓監控系統本身也可以容錯，如果只有 UptimeRobot 監控，那 UptimeRobot 掛掉的話，監控就失效了。
 
-所以除了 UptimeRobot 之外，我還使用 Hubot 的 [hubot-cronjob](https://www.npmjs.com/package/hubot-cronjob) 去排排程，每分鐘定時監控伺服器 (甚至可以做到秒為單位，也可以更客製化)，未來也打算多放幾家的 monitor 來做 (ex. Statuscake, Pingdom)。
+所以除了 UptimeRobot 之外，我還使用 Hubot 的 [hubot-cronjob](https://www.npmjs.com/package/hubot-cronjob) 去排排程，每分鐘定時監控伺服器 (甚至可以做到秒為單位，也可以更客製化)，未來也打算多放幾家的 monitor 來做 (ex. [Statuscake](https://www.statuscake.com/), [Pingdom](https://pingdom.com/))。
 
 不過回到頭來，預防勝於治療，除了這套 Monitor System 之外，伺服器應該是本身要夠強韌才對。想辦法讓伺服器的負載平衡夠強，靠得住不容易 Crash，才是根本之道啊！
