@@ -34,6 +34,7 @@ $ hexo new [layout] <title>
 
 ```
 $ hexo generate
+$ hexo g
 ```
 
 參考來源: [Hexo 官網](https://hexo.io/zh-tw/docs/commands.html)
