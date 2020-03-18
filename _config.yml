@@ -11,7 +11,7 @@ language: zh-TW
 timezone: Asia/Taipei
 
 # URL
-url: https://blog.asoul.tw
+url: http://blog.asoul.tw
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -89,5 +89,5 @@ theme: apollo
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com-asoul:Asoul/blog.asoul.tw.git
+  repo: git@github.com:Asoul/blog.asoul.tw.git
   branch: master
