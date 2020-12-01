@@ -39,4 +39,10 @@
       </article>
     <% }); %>
   </div>
+  <nav id="page-nav">
+    <%- paginator({
+      prev_text: '« Prev',
+      next_text: 'Next »'
+    }) %>
+  </nav>
 <% } %>
