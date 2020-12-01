@@ -1,8 +1,7 @@
+.deploy*/
 .DS_Store
-Thumbs.db
-db.json
 *.log
+db.json
 node_modules/
 public/
-.deploy*/
-package-lock.json
+Thumbs.db
