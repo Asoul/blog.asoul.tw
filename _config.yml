@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 工程師的慘烈修羅場
-subtitle: 四坪房間的工程師 ◢▆▅▄▃ 崩╰(〒皿〒)╯潰 ▃▄▅▆◣
-description: 果然我的程式碼都搞錯了啊 ┴─┴︵╰（‵□′╰
-author: Asoul Yang
+title: 輕量化
+subtitle: 能背的動就一定要背嗎？
+description: 斷捨離 X 極簡 X 生活
+author: Asoul
 language: zh-TW
 timezone: Asia/Taipei
 
@@ -31,16 +31,12 @@ skip_render:
 menu:
   Home: /
   Archives: /archives
-  Facebook: https://www.facebook.com/AsoulYang
-  Github: https://github.com/Asoul
-rss: /atom.xml
 
 ## Content
 excerpt_link: Read More...
-fancybox: true
 
 ## Miscellaneous
-google_analytics: UA-60364521-6
+# google_analytics: UA-60364521-6
 favicon: /favicon.png
 
 # Writing
@@ -73,14 +69,14 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 4
 pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 
 ### Disqus setting
-disqus_shortname: asoul
+# disqus_shortname: asoul
 
 ## Themes: http://hexo.io/themes/
 theme: apollo
