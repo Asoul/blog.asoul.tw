@@ -3,7 +3,7 @@ date: 2017-03-20 21:48:20
 tags: bitfinex, okcoin, crawler
 ---
 
-<img src="/images/socket-crawler/bitcoin.png" width="250">
+<img src="/images/2016-03-20-bitcoin.png" width="250">
 
 前陣子串了 OKCoin 期貨 API，上週串了 Bitfinex API，都蠻好串的，都是同一個套路。
 
