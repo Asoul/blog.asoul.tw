@@ -1,12 +1,9 @@
 #container
-  width: 940px
+  width: 740px
   margin-left: auto
   margin-right: auto
-  padding-right: 100px
 
 #main
-  padding-left: 210px
-  width: 740px
   margin-bottom: 100px
 
 .post
@@ -14,17 +11,22 @@
   position: relative
 
   .entry-header
+    time
+      font-weight: bold
+      color: color-meta
+
     margin-bottom: 2em
 
   .entry-title
     font-weight: bold
     font-size: 220%
     margin: 0
+    margin-top: 0.3em
 
 .article-divider
   margin: 7em auto 5em auto
-  height: 7px
-  background-color: color-meta
+  height: 1px
+  background-color: color-border
   border: none
 
 .entry-meta-header
@@ -46,7 +48,7 @@
     font-weight: bold
     font-size: 120%
     a
-      color: color-title
+      color: color-default
       &:hover
         color: color-link
 
@@ -219,9 +221,25 @@
   float: left
   margin-right: 10px
 
+.article-tag-list-link
+  color: rgb(117, 117, 117)
+  padding: 5px 10px
+  border-radius: 3px
+  line-height: 22px
+  background: rgb(242, 242, 242)
   &:before
-    color: color-link
     content: "#"
 
-  a:hover
-    text-decoration: underline
+  &:hover
+    color: #555
+
+.article-more-link.article-more-link
+  margin-top: 1em
+  a
+    color: rgb(117, 117, 117)
+    padding: 0.4em 0.6em
+    border-radius: 3px
+    background: rgb(242, 242, 242)
+    &:hover
+      color: #555
+      text-decoration: none
