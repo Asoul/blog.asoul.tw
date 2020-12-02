@@ -8,7 +8,7 @@ tags:
 
 最近寶寶梗當紅，剛好又在玩 Hubot，就想把這兩個元素結合在一起。於是，[hubot-boubou](https://www.npmjs.com/package/hubot-boubou) 就這麼誕生了！
 
-<img src="/images/2016-04-24-hubot.png" width="250">
+<img src="/images/20160424-hubot.png" width="250">
 
 這篇文章會分享：
 
@@ -24,7 +24,7 @@ tags:
 
 舉例來說：
 
-<img src="/images/2016-04-24-hubot-boubou-example1.png" width="350">
+<img src="/images/20160424-hubot-boubou-example1.png" width="350">
 
 這是簡單的以文字回應文字的方式。
 
@@ -63,7 +63,7 @@ yo hubot:script
 
 安裝完後，就會看到資料夾裡產生一些預設的檔案：
 
-<img src="/images/2016-04-24-hubot-script-tree.png" width="250">
+<img src="/images/20160424-hubot-script-tree.png" width="250">
 
 這是一個 [TDD](https://en.wikipedia.org/wiki/Test-driven_development) 的架構，`src` 裡放功能的程式碼，`test` 放測試的程式碼，一開始預設已經有產生預設代碼了，所以可以直接跑測試
 

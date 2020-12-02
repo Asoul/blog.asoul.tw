@@ -8,7 +8,7 @@ tags:
 
 這篇文章會以 [nginx](http://nginx.org/) 架在 [Digital Ocean](https://www.digitalocean.com/) 上的 Ubuntu 14.04.4 LTS 為範例，講解如何使用 [Let's Encrypt](https://letsencrypt.org/) 套件裝上免費的 [SSL](https://zh.wikipedia.org/wiki/%E5%82%B3%E8%BC%B8%E5%B1%A4%E5%AE%89%E5%85%A8%E5%8D%94%E8%AD%B0) 憑證，參考自 [Digital Ocean 的教學](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04)。
 
-<img src="/images/2016-04-28-letsencrypt-logo.png" width="400">
+<img src="/images/20160428-letsencrypt-logo.png" width="400">
 
 這篇文章包括：
 
@@ -195,11 +195,11 @@ sudo service nginx reload
 
 做到這一步，就可以成功看到網站前面多出來的 HTTPS 啦！
 
-<img src="/images/2016-04-28-https.png" width="200">
+<img src="/images/20160428-https.png" width="200">
 
 可以[看看網站的 SSL 測試](https://www.ssllabs.com/ssltest/analyze.html)，做出來應該會是 A+。
 
-<img src="/images/2016-04-28-https-report.png" width="800">
+<img src="/images/20160428-https-report.png" width="800">
 
 # <a name="set-auto-update"></a> 第五步：設定自動更新憑證
 
