@@ -32,7 +32,8 @@ skip_render:
 # Apollo setting
 ## Header
 menu:
-  Home: /
+  About: /about
+  Tags: /tags
   Archives: /archives
 
 ## Content
