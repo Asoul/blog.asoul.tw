@@ -13,7 +13,7 @@ timezone: Asia/Taipei
 # URL
 url: https://blog.asoul.tw
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
