@@ -1,6 +1,9 @@
 title: Bitfinex / OKCoin socket crawler
 date: 2017-03-20 21:48:20
-tags: bitfinex, okcoin, crawler
+tags:
+- bitfinex
+- okcoin
+- crawler
 ---
 
 <img src="/images/20170320-bitcoin.png" width="30%">
