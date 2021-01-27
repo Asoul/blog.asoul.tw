@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 輕量化
-subtitle: 能背的動就一定要背嗎？
-description: 斷捨離 X 極簡 X 生活
+title: 平衡
+subtitle: 追求人生的平衡
+description: 紀錄工作、生活的部落格
 author: Asoul
 language: zh-TW
 timezone: Asia/Taipei
@@ -40,7 +40,7 @@ menu:
 excerpt_link: Read More...
 
 ## Miscellaneous
-# google_analytics: UA-60364521-6
+google_analytics: UA-60364521-6
 favicon: /favicon.png
 
 # Writing
