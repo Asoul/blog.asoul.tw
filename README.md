@@ -1,6 +1,6 @@
 # Blog
 
-This blog is currently on `https://asoul.github.io/`
+This blog is currently on `https://blog.asoul.tw`
 
 ## Installation
 
@@ -15,7 +15,7 @@ $ hexo server
 部署
 
 ```
-$ hexo deploy
+$ firebase deploy
 ```
 
 清除快取
