@@ -109,10 +109,6 @@ theme: apollo
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: git@github.com:Asoul/blog.asoul.tw.git
-  branch: master
 
 # Feed
 feed:
