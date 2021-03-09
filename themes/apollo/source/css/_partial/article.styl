@@ -224,26 +224,31 @@
   .meta
     margin-bottom: .7em
 
-.article-tag-list
+.tag-list
   padding: 0
 
-.article-tag-list-item
+.tag-list-item
   float: left
-  margin-right: 10px
-
-.article-tag-list-link
-  color: rgb(117, 117, 117)
-  padding: 5px 10px
-  border-radius: 3px
-  line-height: 22px
+  margin-right: 8px
+  margin-bottom: 12px
   background: rgb(242, 242, 242)
-  line-height: 3em
+  border-radius: 3px
+  padding: 0 10px
+
+.tag-list-link
+  color: rgb(117, 117, 117)
+  line-height: 2em
 
   &:hover
     color: #555
 
-  .article-tag-list-link-count
-    color: rgb(160, 160, 160)
+.tag-list-count
+  &::before
+    content: '('
+  &::after
+    content: ')'
+  color: rgb(160, 160, 160)
+  margin-left: 8px
 
 .article-more-link.article-more-link
   margin-top: 1em
