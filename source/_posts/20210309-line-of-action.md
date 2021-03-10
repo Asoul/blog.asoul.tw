@@ -12,6 +12,6 @@ tags:
 
 感覺這類的硬底子工夫就是需要花很多時間練習的，不斷練習也會慢慢進步，是個不錯的練習！作業的需求是要達到每一分鐘一張，目前還很遙遠，持續練習中。
 
-<img src="/images/20210309-sample.gif">
+<img src="/images/20210309-sample.gif" width="50%">
 
 [Line of action]: https://line-of-action.com/practice-tools/figure-drawing

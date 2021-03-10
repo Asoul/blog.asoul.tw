@@ -8,6 +8,6 @@ tags:
 
 最近其中一個百日挑戰是畫畫，前幾天看完「打動人心的創作秘密，畫出個性的角色設計」了，來補作業啦！
 
-<img src="/images/20210301-chracter-design-hw1.jpg">
+<img src="/images/20210301-chracter-design-hw1.jpg" width="50%">
 
 作業一是用大形狀創造出動物的角色，用圓形、三角形、方形來畫五個動物。
