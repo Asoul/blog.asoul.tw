@@ -28,6 +28,7 @@
   height: 1px
   background-color: color-border
   border: none
+  clear: both
 
 .entry-meta-header
   position: absolute
@@ -237,11 +238,13 @@
   margin-bottom: 16px
   background: rgb(242, 242, 242)
   border-radius: 8px
-  padding: 0 16px
 
 .tag-list-link
   color: rgb(117, 117, 117)
+  display: inline-block
+  height: 32px
   line-height: 32px
+  padding: 0 16px
 
   &:hover
     color: #555
@@ -252,7 +255,8 @@
   &::after
     content: ')'
   color: rgb(160, 160, 160)
-  margin-left: 8px
+  position: relative
+  left: -8px
 
 .article-tag-list
   padding: 0
