@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "hexo clean",
-    "publish": "hexo clean && hexo generate && hexo deploy"
+    "publish": "hexo generate && firebase deploy",
   },
   "hexo": {
     "version": "4.2.1"
