@@ -27,7 +27,7 @@ yarn link
 
 # Some repo
 cd some-good-app
-yarn link shared
+yarn link "shared"
 
 yard add next-transpile-modules
 ```
@@ -35,12 +35,22 @@ yard add next-transpile-modules
 Then edit `next.config.js`
 
 ```js
-const withTM = require('next-transpile-modules')(['bar'])
+const withTM = require('next-transpile-modules')(['shared'])
 
 module.exports = withTM()
 ```
 
-Hope this helps you!
+You can now use
+
+```
+import awesome_component from 'shared'
+```
+
+in your repository!
+
+---
+
+Hope this helps you! :)
 
 ## Reference
 
