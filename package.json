@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "dev": "hexo server",
     "clean": "hexo clean",
     "publish": "hexo generate && firebase deploy"
   },
