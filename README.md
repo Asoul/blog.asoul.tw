@@ -38,3 +38,10 @@ $ hexo g
 ```
 
 參考來源: [Hexo 官網](https://hexo.io/zh-tw/docs/commands.html)
+
+
+## Image compress
+
+```
+https://fengyuanchen.github.io/compressorjs/
+```
