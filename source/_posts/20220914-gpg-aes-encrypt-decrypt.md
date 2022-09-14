@@ -1,4 +1,4 @@
-title: GPG Aes 256 encrypt and decrypt
+title: GPG AES 256 encrypt and decrypt
 date: 2022-09-14 21:29:12
 tags:
 - gpg
