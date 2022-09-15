@@ -11,7 +11,7 @@ tags:
 gpg --cipher-algo AES256 \
   --no-symkey-cache \
   --batch --pinentry-mode loopback \
-  --passphrase  "STRONG_PASSWORD" \
+  --passphrase "STRONG_PASSWORD" \
   --output ENCRYPTED_FILENAME --symmetric FILENAME
 
 ```
@@ -21,7 +21,7 @@ gpg --cipher-algo AES256 \
 ```bash
 gpg --no-symkey-cache \
   --batch --pinentry-mode loopback \
-  --passphrase  "STRONG_PASSWORD" \
+  --passphrase "STRONG_PASSWORD" \
   --output DECRYPTED_FILENAME --decrypt ENCRYPTED_FILENAME
 ```
 
