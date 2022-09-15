@@ -12,7 +12,7 @@ gpg --cipher-algo AES256 \
   --no-symkey-cache \
   --batch --pinentry-mode loopback \
   --passphrase  "STRONG_PASSWORD" \
-  --output file.aes --symmetric file.zip
+  --output ENCRYPTED_FILENAME --symmetric FILENAME
 
 ```
 
@@ -22,7 +22,7 @@ gpg --cipher-algo AES256 \
 gpg --no-symkey-cache \
   --batch --pinentry-mode loopback \
   --passphrase  "STRONG_PASSWORD" \
-  --output file2.zip --decrypt file.aes
+  --output DECRYPTED_FILENAME --decrypt ENCRYPTED_FILENAME
 ```
 
 ## Option explanation
