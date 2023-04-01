@@ -28,8 +28,15 @@
 		</div>
 	</footer>
 	<% if (!index) { %>
+	<script src="https://utteranc.es/client.js"
+		repo="asoul/blog.asoul.tw"
+		issue-term="title"
+		theme="github-light"
+		crossorigin="anonymous"
+		async>
+	</script>
     <%- partial('post/nav') %>
-  <% } %>
+	<% } %>
 </article>
 
 <% if (index) { %>
