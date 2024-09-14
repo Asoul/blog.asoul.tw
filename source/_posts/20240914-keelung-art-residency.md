@@ -55,7 +55,7 @@ We crafted a chikuwa-shaped telescope from clay, through which you can view the 
 <img src="/images/20240914/AAA_6375.jpg">
 
 
-We are profoundly grateful for the opportunity to participate in this residency. It has been an enriching experience that has profoundly impacted our lives. Our artistic journey continues to unfold...
+We are grateful for the opportunity to participate in this residency. It has been an enriching experience that has profoundly impacted our lives. Our artistic journey continues to unfold...
 
 
 <img src="/images/20240914/AAA_8506.jpg">
