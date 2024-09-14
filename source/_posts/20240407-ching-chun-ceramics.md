@@ -3,6 +3,8 @@ date: 2024-04-07 13:22:10
 tags:
 - ceramics
 - handmade
+- chingchun
+
 ---
 
 In the past year, I have been learning ceramics with my wife. We have been to several studios to learn from different teachers.
